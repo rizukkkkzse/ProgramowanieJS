@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strafun, Klasa 3K</title>
+        <style>
+            h1 {
+                font-size: 1cm;
+                color: red;
+                margin-top: 20px;
+            }
+        </style>
+        <script language="JavaScript">
+            function WinOpen_z3_strafun() {
+                window.open(
+                    "Zadanie3/obraz.html",
+                    "okienko_z3",
+                    "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"
+                );
+            }
+
+            function WinOpen_z4_strafun() {
+                window.open(
+                    "z4_stra.html",
+                    "okienko_z4",
+                    "toolbar=no,directories=no,menubar=no,height=600,width=800,top=100,left=200"
+                );
+            }
+            function WinOpen_z5_strafun() {
+                window.open(
+                    "z5_stra.html",
+                    "okienko_z5",
+                    "toolbar=no,directories=no,menubar=no,height=600,width=800,top=100,left=200"
+                );
+            }
+
+            function okno_zamknij_strafun() {
+                window.close();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Szkielet zaliczeniowy JavaScript Strafun Klasa 3K</h1>
+        <form>
+            <input type="button" name="zadanie3" value="Zadanie 3 - Strafun" onclick="WinOpen_z3_strafun()" />
+            <input type="button" name="zadanie4" value="Zadanie 4 - Strafun" onclick="WinOpen_z4_strafun()" />
+            <input type="button" name="zadanie5" value="Zadanie 5 - Strafun" onclick="WinOpen_z5_strafun()" />
+            <input type="button" value="Zamknij okno" onclick="okno_zamknij_strafun()" />
+        </form>
+    </body>
+</html>

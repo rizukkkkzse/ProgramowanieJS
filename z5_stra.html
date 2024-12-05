@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strafun, Klasa 3K</title>
+        <style>
+        h1 {
+            font-size: 1cm;
+            color: red;
+            margin-top: 20px;
+        }
+        
+    </style>
+    <script language="JavaScript"> 
+        function WinOpen_strafun1() { 
+            window.open(
+                "grafika1.html",
+                "okienko",
+                "width=300,height=200,top=100,left=100"
+            ); 
+        } 
+        function WinOpen_strafun2() { 
+            window.open(
+                "grafika2.html",
+                "okienko",
+                "width=300,height=200,top=200,left=300"
+            ); 
+        } 
+        function WinOpen_strafun3() { 
+            window.open(
+                "grafika3.html",
+                "okienko",
+                "width=300,height=200,top=300,left=500"
+            ); 
+        } 
+        function WinOpen_strafun4() { 
+            window.open(
+                "grafika4.html",
+                "okienko",
+                "width=300,height=200,top=400,left=700"
+            ); 
+        } 
+        function okno_zamknij_strafun() {
+                window.close();
+            }
+    </script>
+    </head>
+    <body>
+        <h1>Wykonal: Strafun Oleksandr moj numer w dzienniku 28, czyli mam uklad [(28) mod 4=2 ] uklad 3</h1>
+        <form>
+            <input type="button" name="zadanie5" value="grafika1" onclick="WinOpen_strafun1()" />
+            <input type="button" name="zadanie5" value="grafika2" onclick="WinOpen_strafun2()" />
+            <input type="button" name="zadanie5" value="grafika3" onclick="WinOpen_strafun3()" />
+            <input type="button" name="zadanie5" value="grafika4" onclick="WinOpen_strafun4()" />
+            <br>
+            <br>
+            <br>
+            <center>
+            <input type="button" value="Zamknij okno" onclick="okno_zamknij_strafun()" />
+            </center>
+        </form>
+    </body>
+</html>
