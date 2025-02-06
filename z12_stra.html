@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zadanie 12 - Strafun Oleksandr</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        const d1Stra = prompt("D1=" + "");
+        const g1Stra = prompt("G1=" + "");
+        const d2Stra = prompt("D2=" + "");
+        const g2Stra = prompt("G2=" + "");
+
+        const hoursAmount = (d1Stra - d2Stra) * 24 + (g1Stra - g2Stra);
+        const secondsAmount = hoursAmount * 3600;
+
+        document.write("D1=" + d1Stra + "<br>");
+        document.write("D2=" + d2Stra + "<br>");
+        document.write("G1=" + g1Stra + "<br>");
+        document.write("G2=" + g2Stra + "<br>");
+        document.write("Ilość sekund=" + secondsAmount + "<br>");
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>

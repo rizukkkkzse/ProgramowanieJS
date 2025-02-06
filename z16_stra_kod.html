@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadanie 16 - Strafun Oleksandr | Kod HTML</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea readonly>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Zadanie 16 - Strafun Oleksandr</title>
+        <meta charset="utf-8">
+      </head>
+      <body>
+        <div style="color:green; font-size:50px;">
+        <script language="JavaScript">
+            const aStr = Number(prompt("A=" + ""));
+            const bStr = Number(prompt("B=" + ""));
+    
+            const result = aStr**3 + 3*aStr**2*bStr + 3*aStr*bStr**2 + bStr**3;
+    
+            document.write("Wczytane liczby: A=" + aStr + " B=" + bStr + "<br>");
+            document.write(
+              '(' + aStr + ' + ' + bStr + ')^3 = ' +
+              aStr + '^3 + 3*' + aStr + '^2*' + bStr + ' + 3*' + 
+              aStr + '*' + bStr + '^2 + ' + bStr + '^3 = ' +
+              result
+            );
+    
+        </script>
+        </div>
+        <input type="button" value="zamknij okno" onclick="window.close()"/>
+      </body>
+    </html>
+    </textarea>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    function AB_str() {
+      let aX_str = parseFloat(document.getElementById('aX').value);
+      let aY_str = parseFloat(document.getElementById('aY').value);
+
+      let bX_str = parseFloat(document.getElementById('bX').value);
+      let bY_str = parseFloat(document.getElementById('bY').value);
+
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_str - bX_str) ** 2 + (aY_str - bY_str) ** 2)).toFixed(2);
+    }
+
+    function BC_str() {
+      let bX_str = parseFloat(document.getElementById('bX').value);
+      let bY_str = parseFloat(document.getElementById('bY').value);
+
+      let cX_str = parseFloat(document.getElementById('cX').value);
+      let cY_str = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_str - bX_str) ** 2 + (cY_str - bY_str) ** 2)).toFixed(2);
+    }
+
+    function AC_str() {
+      let aX_str = parseFloat(document.getElementById('aX').value);
+      let aY_str = parseFloat(document.getElementById('aY').value);
+      let cX_str = parseFloat(document.getElementById('cX').value);
+      let cY_str = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_str - cX_str) ** 2 + (aY_str - cY_str) ** 2)).toFixed(2);
+    }
+
+  </script>
+
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+  <br>
+  <br>
+
+
+  <input type="button" value="Oblicz AB" onclick="AB_str()"><br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_str()"><br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_str()"><br>
+  <br>
+  <br>
+
+  <div style="color:red;font-size:50px;" id="answer"></div>
+</body>
+
+</html>
