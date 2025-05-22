@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 39 KOD - Oleksandr Strafun</title>
+</head>
+<body style="background-color:#f0f0f0;">
+  <h2>KOD programu - Zadanie 39</h2>
+  <form>
+    <textarea cols="100" rows="30" readonly>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 39 - Oleksandr Strafun</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .menu {
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    function fun_str() {
+      var opcja_dana_str = prompt("Podaj kolor (1, 2, czerwony, niebieski):", "");
+      var kolor = opcja_dana_str.toLowerCase();
+
+      if (opcja_dana_str == "1" || kolor == "czerwony") {
+        document.write('<h1 style="color:red; font-size:32px;">Wczytałeś kolor czerwony</h1>');
+      } else if (opcja_dana_str == "2" || kolor == "niebieski") {
+        document.write('<h6 style="color:blue; font-size:16px;">Wczytałeś kolor niebieski</h6>');
+      } else {
+        document.write('<p style="color:gray;">Nie rozpoznano koloru</p>');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2 style="color:green;">MENU:</h2>
+  <div class="menu">
+    <p style="color:red;">1 - CZERWONY</p>
+    <p style="color:blue;">2 - NIEBIESKI</p>
+  </div>
+  <input type="button" value="Oblicz" onclick="fun_str()">
+</body>
+</html>
+    </textarea>
+  </form>
+  <br>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

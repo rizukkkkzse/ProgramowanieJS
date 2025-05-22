@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadanie 32- Strafun Oleksandr</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea readonly>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ZADANIE 32 | Strafun Oleksandr</title>
+    <script type="text/javascript">
+function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+}
+klient.prototype.wypisz = function () 
+{
+alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod);
+};
+var osoba1 = new klient("Kowalski", "Jan", "kierowca");
+var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
+osoba1.wypisz();
+osoba2.wypisz();
+document.write("dostęp do właściwości"+"<br>");
+document.write("klient pierwszy"+" "+osoba1.nazwisko+" "+osoba1.imie+" "+osoba1.zawod);
+</script>
+</head>
+<body>
+<br>
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+function Osoba(nazwisko, imie, zawod) {
+  this.nazwisko = nazwisko;
+  this.imie = imie;
+  this.zawod = zawod;
+  this.kierowca = 'Jan Kowalski'; 
+}
+
+Osoba.prototype.pokaz = function () {
+  alert(this.nazwisko + ' ' + this.imie + ' ' + this.zawod);
+};
+
+Osoba.prototype.pokazKierowce = function() {
+  alert('Kierowca: ' + this.kierowca);
+};
+
+var osoba1 = new Osoba("Kowalski", "Jan", "kierowca");
+var osoba2 = new Osoba('Nowak', 'Anna', 'sekretarka');
+osoba1.pokaz();
+osoba1.pokazKierowce();
+osoba2.pokaz();
+document.write("Dostęp do właściwości" + "<br>");
+document.write("Osoba pierwsza" + " " + osoba1.nazwisko + " " + osoba1.imie + " " + osoba1.zawod);
+</script>
+</head>
+<body>
+    <br>
+    programowanie obiektowe
+    <input type="button" value="zamknij okno" onclick="window.close()" />
+</body>
+
+</html>
+    </textarea>
+</body>
+
+</html>

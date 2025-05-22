@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadanie 31- Strafun Oleksandr</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea readonly>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ZADANIE 31 | Strafun Oleksandr</title>
+    <script>
+        function Spodnie(typ, nazwa, marka, kolor) {
+            this.typ = typ;
+            this.nazwa = nazwa;
+            this.marka = marka;
+            this.kolor = kolor;
+            this.producent = "Nike Inc.";
+
+            this.pokaz = function () {
+                document.write(
+                    "Typ: " + this.typ + "<br>" +
+                    "Nazwa: " + this.nazwa + "<br>" +
+                    "Marka: " + this.marka + "<br>" +
+                    "Kolor: " + this.kolor + "<br>"
+                );
+            };
+
+            this.pokazProducenta = function () {
+                alert("Producent: " + this.producent);
+            };
+        }
+
+        var spodnie1 = new Spodnie("Długie", "Nike", "Air", "Czerwone");
+        spodnie1.pokaz();
+        spodnie1.pokazProducenta();
+    </script>
+</head>
+<body>
+    <br><br><br>
+    programowanie obiektowe<br>
+    <input type="button" value="zamknij okno" onclick="window.close()" />
+</body>
+</html>
+
+    </textarea>
+</body>
+
+</html>

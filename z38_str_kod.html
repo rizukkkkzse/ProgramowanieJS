@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zadanie 38- Strafun Oleksandr</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea readonly>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 38 - Oleksandr Strafun</title>
+</head>
+<body style="background-color: silver;">
+<script type="text/javascript">
+  var imie_stra = "Oleksandr";
+  var nazwisko_stra = "Strafun";
+  var dzien_urodzenia_stra = 7;
+  var numer_dziennika_stra = 28;
+
+  // Obliczenia
+  var liczba1_stra = imie_stra.length; // 9
+  var liczba2_stra = liczba1_stra + 7; // 16
+  var liczba3_stra = nazwisko_stra.length; // 7
+  var liczba4_stra = liczba3_stra + 4; // 11
+
+  // Rozmiar tekstu
+  var wielkosc_stra = 40 + (numer_dziennika_stra % 7); // 40 + (28%7) = 40
+
+  // Wyświetlenie danych
+  document.write("<p style='color:green; font-size:" + wielkosc_stra + "px;'>");
+  document.write("Nazwisko i imię: " + nazwisko_stra + " " + imie_stra + "<br>");
+  document.write("Liczba1 = " + liczba1_stra + ", Liczba2 = " + liczba2_stra +
+                 ", Liczba3 = " + liczba3_stra + ", Liczba4 = " + liczba4_stra);
+  document.write("</p>");
+
+  // Menu
+  document.write("<p style='color:red; font-size:" + wielkosc_stra + "px;'>");
+  document.write("MENU:<br>");
+  document.write("Opcja " + liczba1_stra + " - teoria o operatorach logicznych<br>");
+  document.write("Opcja " + (liczba3_stra + 20) + " - sprawdzanie czy liczba należy do przedziału (" + liczba3_stra + " ; " + liczba4_stra + "]<br>");
+  document.write("Opcja " + (dzien_urodzenia_stra + 50) + " - sprawdzanie czy liczba należy do (-∞, " + liczba1_stra + ") lub [" + liczba2_stra + ", ∞)<br>");
+  document.write("</p>");
+
+  var opcja_str = parseInt(prompt("Podaj numer opcji:", ""));
+
+  if (opcja_str === liczba1_stra) {
+    document.write("<font color=blue size=7>Jesteś w opcji " + liczba1_stra + " — TEORIA</font><br>");
+    document.write("Operator && — logiczne i<br>");
+    document.write("Operator || — logiczne lub<br>");
+    document.write("Operator ! — zaprzeczenie (negacja)<br>");
+  } else if (opcja_str === (liczba3_stra + 20)) {
+    var liczba_opcja27 = parseFloat(prompt("Podaj liczbę do sprawdzenia dla opcji 27:", ""));
+    if (liczba_opcja27 > liczba3_stra && liczba_opcja27 <= liczba4_stra) {
+      document.write("<font color=green size=6>Liczba należy do przedziału (" + liczba3_stra + " ; " + liczba4_stra + "]</font>");
+    } else {
+      document.write("<font color=red size=6>Liczba NIE należy do przedziału (" + liczba3_stra + " ; " + liczba4_stra + "]</font>");
+    }
+  } else if (opcja_str === (dzien_urodzenia_stra + 50)) {
+    var liczba_opcja57 = parseFloat(prompt("Podaj liczbę do sprawdzenia dla opcji 57:", ""));
+    if (liczba_opcja57 < liczba1_stra || liczba_opcja57 >= liczba2_stra) {
+      document.write("<font color=green size=6>Liczba należy do przedziału (-∞, " + liczba1_stra + ") lub [" + liczba2_stra + ", ∞)</font>");
+    } else {
+      document.write("<font color=red size=6>Liczba NIE należy do tych przedziałów</font>");
+    }
+  } else {
+    document.write("<font color=red size=7>Nie ma takiej opcji</font><br>");
+  }
+</script>
+</body>
+</html>
+
+    </textarea>
+</body>
+
+</html>
