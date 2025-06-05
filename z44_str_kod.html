@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 44 KOD - Oleksandr Strafun</title>
+</head>
+<body style="background-color:#f0f0f0;">
+  <h2>KOD programu - Zadanie 44</h2>
+  <form>
+    <textarea cols="100" rows="30" readonly>
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Strafun - Zadanie44</title>
+</head>
+<body>
+  <div id="wynik"></div>
+
+  <script>
+      const imie_str = "Oleksandr";
+      const nazwisko_str = "Strafun";
+      
+      const dlugosc_nazwiska_str = nazwisko_str.length;
+      const koniec_petli_str = (dlugosc_nazwiska_str % 4) + 10;
+      const wielkosc_liter_str = (dlugosc_nazwiska_str % 3) + 40;
+
+      let wynikDiv = document.getElementById("wynik");
+      wynikDiv.innerHTML = "";
+      
+      wynikDiv.innerHTML += `Ilość wykonania pętli = ${koniec_petli_str}<br>`;
+      wynikDiv.innerHTML += `Wielkość liter = ${wielkosc_liter_str}px<br><br>`;
+
+      for (let i_str = 1; i_str <= koniec_petli_str; i_str++) {
+        if (i_str % 2 === 0) {
+          wynikDiv.innerHTML += `<span style="font-size:${wielkosc_liter_str}px">${imie_str}</span><br>`;
+        } else {
+          wynikDiv.innerHTML += `<span style="font-size:${wielkosc_liter_str}px">${nazwisko_str}</span><br>`;
+        }
+      }
+  </script>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
+
+    </textarea>
+  </form>
+  <br>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

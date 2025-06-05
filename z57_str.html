@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<title>Zadanie 57 – Pierwiastki 2 i 4 stopnia</title>
+<style>
+  body { font-family: monospace; font-size: 18px; }
+  #wynik { white-space: pre; margin-bottom: 1em; }
+  button { font-size: 16px; padding: 0.3em 1em; }
+</style>
+</head>
+<body>
+
+<h1>Zadanie 57 – Drukowanie liczb i pierwiastków</h1>
+
+<div id="wynik"></div>
+<button id="przyciskDalej" style="display:none;">Kontynuuj</button>
+
+<script>
+  // Numer z dziennika - zmień na swój numer
+  var numerZadania = 7;
+
+  var wynik = document.getElementById('wynik');
+  var przycisk = document.getElementById('przyciskDalej');
+
+  var liczba = numerZadania;
+  var liczbaMax = numerZadania + 15;
+  var ileNaRaz = 3;
+
+  function pokazLinie() {
+    var linieWypisane = 0;
+    while (liczba <= liczbaMax && linieWypisane < ileNaRaz) {
+      var pierwiastek2 = Math.sqrt(liczba).toFixed(2);
+      var pierwiastek4 = Math.sqrt(Math.sqrt(liczba)).toFixed(2);
+      var tekstDoWypisania = "I=" + liczba + " pierw_2(" + liczba + ")=" + pierwiastek2 + " pierw_4(" + liczba + ")=" + pierwiastek4 + "\n";
+      wynik.textContent += tekstDoWypisania;
+      liczba++;
+      linieWypisane++;
+    }
+    if (liczba <= liczbaMax) {
+      przycisk.style.display = "inline-block";
+    } else {
+      przycisk.style.display = "none";
+    }
+  }
+
+  przycisk.addEventListener("click", function() {
+    przycisk.style.display = "none";
+    pokazLinie();
+  });
+
+  // zaczynamy
+  pokazLinie();
+</script>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

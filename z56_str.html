@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<title>Zadanie 56 – Liczby pierwsze wzorem | Strafun Oleksandr</title>
+<style>
+  body { font-family: monospace; font-size: 18px; }
+  #wynik { white-space: pre; margin-bottom: 1em; }
+  button { font-size: 16px; padding: 0.3em 1em; }
+</style>
+</head>
+<body>
+
+<h1>Zadanie 56 – Liczby pierwsze wzorem w(i)=i² + i + 41</h1>
+
+<div id="wynik"></div>
+<button id="przyciskDalej" style="display:none;">Kontynuuj</button>
+
+<script>
+
+  function czyLiczbaPierwsza(liczba) {
+    if (liczba < 2) {
+      return false;
+    }
+    if (liczba === 2) {
+      return true;
+    }
+    if (liczba % 2 === 0) {
+      return false;
+    }
+    let limit = Math.floor(Math.sqrt(liczba));
+    for (let dzielnik = 3; dzielnik <= limit; dzielnik += 2) {
+      if (liczba % dzielnik === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  let wyjscie = document.getElementById('wynik');
+  let przycisk = document.getElementById('przyciskDalej');
+
+  let licznik = 0;
+  const maxLicznik = 39;
+  const ileNaRaz = 5;
+
+  function pokazLinie() {
+    let wypisane = 0;
+    while (licznik <= maxLicznik && wypisane < ileNaRaz) {
+      let wartosc = licznik*licznik + licznik + 41;
+      let tekst = "i=" + licznik + "  w(" + licznik + ")=" + wartosc;
+      if (!czyLiczbaPierwsza(wartosc)) {
+        tekst += " (!!! NIE PIERWSZA !!!)";
+      }
+      wyjscie.textContent += tekst + "\n";
+      licznik++;
+      wypisane++;
+    }
+
+    if (licznik <= maxLicznik) {
+      przycisk.style.display = "inline-block";
+    } else {
+      przycisk.style.display = "none";
+    }
+  }
+
+  przycisk.addEventListener("click", function() {
+    przycisk.style.display = "none";
+    pokazLinie();
+  });
+
+
+  pokazLinie();
+</script>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

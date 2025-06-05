@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>ZADANIE 46 | Strafun Oleksandr</title>
+</head>
+<body>
+  <div style="color:red; font-size:50px;">
+    <script>
+      let h_str, a_str;
+      
+      // Wczytywanie wysokości
+      do {
+        let liczba1 = prompt("Podaj wysokość (cm):", "");
+        h_str = parseFloat(liczba1);
+      } while (h_str <= 0);
+      
+      // Wczytywanie podstawy
+      do {
+        let liczba1 = prompt("Podaj podstawę (cm):", "");
+        a_str = parseFloat(liczba1);
+      } while (!(a_str > 0));
+      
+      // Obliczanie pola
+      let pole_str = a_str * h_str / 2;
+      document.write("Pole = " + pole_str.toFixed(2) + " cm²<br>");
+    </script>
+  </div>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

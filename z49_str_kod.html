@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 49 KOD - Oleksandr Strafun</title>
+</head>
+<body style="background-color:#f0f0f0;">
+  <h2>KOD programu - Zadanie 49</h2>
+  <form>
+    <textarea cols="100" rows="30" readonly>
+ <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZADANIE 49 | Strafun Oleksandr</title>
+</head>
+<body>
+  
+  <script>
+    let n_str = prompt("Podaj liczbę n (całkowita nieujemna):");
+    n_str = parseInt(n_str);
+
+    if (isNaN(n_str) || n_str < 0) {
+      document.write("Błąd: Podaj liczbę całkowitą nieujemną.");
+    } else {
+      let silnia_str = 1;
+      
+      if (n_str > 0) {
+        for (let i_str = 1; i_str <= n_str; i_str++) {
+          silnia_str *= i_str;
+        }
+      }
+      document.write(n_str + "! = " + silnia_str);
+    }
+  </script>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>      
+    </textarea>
+  </form>
+  <br>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

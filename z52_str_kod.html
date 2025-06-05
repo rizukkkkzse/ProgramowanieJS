@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 52 KOD - Oleksandr Strafun</title>
+</head>
+<body style="background-color:#f0f0f0;">
+  <h2>KOD programu - Zadanie 52</h2>
+  <form>
+    <textarea cols="100" rows="30" readonly>
+ <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZADANIE 52 | Strafun Oleksandr</title>
+  <style>
+    pre {
+      font-family: monospace;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zadanie 52 – Rysowanie prostokąta z gwiazdek</h1>
+  <p><strong>Imię i nazwisko:</strong> Oleksandr Strafun</p>
+  <pre id="rysunek"></pre>
+
+  <script>
+    const imie = "Oleksandr";
+    const nazwisko = "Strafun";
+
+
+    const a_str = (nazwisko.length % 4) + 5; 
+    const b_str = (imie.length % 6) + 20; 
+
+    let wynik = "";
+
+
+    for (let i = 0; i < b_str; i++) {
+      wynik += "*";
+    }
+    wynik += "\n";
+
+
+    for (let i = 0; i < a_str - 2; i++) {
+      wynik += "*";
+      for (let j = 0; j < b_str - 2; j++) {
+        wynik += " ";
+      }
+      wynik += "*\n";
+    }
+
+
+    for (let i = 0; i < b_str; i++) {
+      wynik += "*";
+    }
+
+    document.getElementById("rysunek").textContent = wynik;
+  </script>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
+
+    </textarea>
+  </form>
+  <br>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

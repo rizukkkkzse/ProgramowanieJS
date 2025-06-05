@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZADANIE 48 | Strafun Oleksandr</title>
+</head>
+<body>
+  <h1>Obliczanie sumy szeregu harmonicznego od 1 do 1 000 000</h1>
+  <div id="wynik" style="font-size:24px; color:green;"></div>
+
+  <script>
+    let suma_str = 0;
+    let i_str = 1;
+    const limit = 1000000;
+
+    for (; i_str <= limit; i_str++) {
+      suma_str += 1 / i_str;
+    }
+
+    document.getElementById("wynik").textContent = "Suma szeregu harmonicznego: " + suma_str.toFixed(6);
+  </script>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>

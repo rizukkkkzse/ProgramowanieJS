@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>ZADANIE 47 | Strafun Oleksandr</title>
+</head>
+<body>
+  <h2>Zadanie 47 – Sprawdzanie boków trójkąta</h2>
+  <button onclick="sprawdzTrojkat()">Sprawdź trójkąt</button>
+  <p id="wynik"></p>
+
+  <script>
+    function sprawdzTrojkat() {
+      let a_str, b_str, c_str;
+      do {
+        a_str = parseFloat(prompt("Podaj bok a:"));
+        b_str = parseFloat(prompt("Podaj bok b:"));
+        c_str = parseFloat(prompt("Podaj bok c:"));
+      } while (
+        isNaN(a_str) || isNaN(b_str) || isNaN(c_str) ||
+        a_str <= 0 || b_str <= 0 || c_str <= 0 ||
+        (a_str + b_str <= c_str) ||
+        (a_str + c_str <= b_str) ||
+        (b_str + c_str <= a_str)
+      );
+
+      document.getElementById("wynik").innerText = `Boki ${a_str}, ${b_str}, ${c_str} tworzą trójkąt.`;
+    }
+  </script>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
